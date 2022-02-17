@@ -1,0 +1,12 @@
+.w-19{
+    width: 19%;
+}
+.w-30{
+    width: 33%;
+}
+.triangle-element {
+    width: 30px;
+    height: 30px;
+    /* background: rgb(228, 53, 9); */
+    clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
+}

@@ -1,0 +1,41 @@
+<div class="container  ">
+    <div class=" col-md-12 d-flex justify-content-between ">
+         <div  class="border w-19 justify-content-evenly align-items-center backcolor flex-wrap pt-4  ps-4 my-2" *ngFor="let item of dashboard">
+                <p class="fs-6 fw-normal opacity-75">{{item.status}} </p>
+                <P class="fs-3 fw-normal opacity-50">{{item.days}}</P>
+
+                <div class="triangle-element float-end" [ngStyle]="{'background-color': item.color}">
+                    
+                </div> 
+         </div>
+    </div>
+  
+</div>
+<div class="container ">
+    <div class="col-sm-12 d-flex justify-content-between border-bottom align-items-center p-3 mt-4 backcolor">
+        <p class="fw-bold fs-6 opacity-75">Shipments</p>
+        <p class="btn btn-primary text-light">Show All</p>
+    </div>
+    
+   
+</div>
+
+<div class="container">
+    <app-dashboardcommon></app-dashboardcommon>
+</div>
+
+<div class="col-md-12 border container mt-4">
+   <div class="d-flex justify-content-between flex-wrap col-md-12">
+    <div class=" border col-sm-12 col-md-4 backcolor">
+        <app-dashboardactivebookings></app-dashboardactivebookings>
+    </div>
+
+    <div class=" border col-sm-12  col-md-4 backcolor ">
+        <app-dashboardactivequotes></app-dashboardactivequotes>
+    </div>
+
+    <div class=" border col-md-4 col-sm-12 backcolor ">
+        <app-dashboardactiveoutinvoices></app-dashboardactiveoutinvoices>
+    </div>
+   </div>
+</div>

@@ -1,0 +1,24 @@
+<div class="col-md-12">
+    <div class="col-md-12 py-2 px-3 d-flex align-items-center justify-content-between  border-bottom ">
+        <p class="fs-5">Active Quotes(18)</p>
+        <p class="btn btn-primary">Show All</p>
+      </div>
+</div>
+<section class="p-3 border-bottom " *ngFor="let data of quotationValues">
+    <div >
+      <div class="d-flex justify-content-between ">
+        <p class="opacity-75 fw-bold">QUO # <a routerLink="/shipmentsdetails/details" >{{data.quoNumber}}</a> </p>
+        
+
+      </div>
+
+      <p class="opacity-100">{{'Delhi'}} <i class="fas fa-arrow-right mx-3"></i> {{'Chennai'}}</p>
+
+      <div class="d-flex justify-content-between w-75 opacity-75">
+
+        <p>Volume(cbm):{{data.volume}}</p>
+        <p class="text-center ps-4">Weight(kg):{{data.weight}}</p>
+        <p>{{''}}</p>
+      </div>
+    </div>
+  </section>

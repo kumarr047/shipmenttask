@@ -1,0 +1,244 @@
+<div class="container-fluid ">
+  <nav class="navbar navbar-expand-lg navbar-dark  bg-primary ">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon "></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link  mx-2 fs-6 " [routerLink]="['/dashboard/dashboardhome']" routerLinkActive="active" >Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 fs-6 " routerLink="/shipments/shipment" routerLinkActive="active">Shipments</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 fs-6 " [routerLink]="['/bookings/bookinglist']" routerLinkActive="active">Bookings</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 fs-6 " [routerLink]="['/quotations/quotationdetails']" routerLinkActive="active">Quotations</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2  fs-6 " [routerLink]="['/invoice/invoicedetails']" routerLinkActive="active" >Invoices</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link mx-2 fs-6  ">Reports</a>
+          </li>
+        </ul>
+        <div class="d-flex  justify-content-evenly align-items-center ">
+          <div class="mx-5">
+            <i class="far fa-bell fs-3 position-relative text-light">
+              <span class="position-absolute top-0 fs-6 translate-middle badge rounded-pill bg-danger">9</span>
+            </i>
+          </div>
+
+          <div>
+            <i class="fas fa-user-circle fs-2 text-light"></i>
+          </div>
+
+
+        </div>
+
+      </div>
+    </div>
+  </nav>
+</div>
+<!-- /second -->
+<div class=" container ">
+  <div class="my-4  d-flex flex-sm-wrap  col-md-12 ">
+    <div class=" py-2 d-flex  flex-wrap col-md-6 col-sm-12 align-items-center justify-content-start">
+      <span class="fw-bold fs-5 opacity-50">Shipments</span>
+    </div>
+    <!-- second div -->
+    <div class=" separate  d-flex flex-wrap col-sm-8 col-md-6 ">
+
+      <div class="d-flex align-items-center justify-content-end border col-md-5 ">
+        <p class="mt-2 me-1  fw-bold opacity-50">show by</p>
+        <!-- dropdown -->
+        <div class="w-75">
+          <select class=" btn btn-outline-info text-dark  w-100">Book No
+            <option value="book one">Booking No</option>
+            <option value="book one">HBL/HAWB No</option>
+            <option value="book one">OBL/OAWB No</option>
+            <option value="book one">Po No</option>
+
+          </select>
+        </div>
+
+
+
+      </div>
+      <!--  table -->
+      <div class=" col-md-1 mx-2 d-flex align-items-center justify-content-start ">
+
+        <button mat-button class="border border-light" (click)="openDialog()"><i
+            class="fas fa-table fs-4 text-primary "></i>
+        </button>
+        <button mat-button class="border border-light" (click)="openDialog()"><i
+            class="fas fa-bars fs-4 text-primary "></i>
+        </button>
+      </div>
+      <!-- search -->
+      <div class="col-md-6 col-sm-12  row">
+        <form class="d-flex justify-content-end  ">
+          <div class="row">
+            <div class=" ms-4 w-100">
+
+              <div class="input-group">
+                <input class="form-control border-end-0 border" [matAutocomplete]="auto" type="search" value="search"
+                  placeholder="search" id="example-search-input">
+                <!-- auto complete -->
+                <mat-autocomplete #auto="matAutocomplete">
+                  <mat-option>
+                    <div class="d-flex flex-column">
+                      <mat-checkbox class="example-margin">Booking No</mat-checkbox>
+
+                    </div>
+                  </mat-option>
+                </mat-autocomplete>
+                <span class="input-group-append">
+                  <button class="btn btn-outline-secondary bg-white border-start-0 border-bottom-0 border ms-n5"
+                    type="button">
+                    <i class="fa fa-search"></i>
+                  </button>
+                </span>
+              </div>
+            </div>
+          </div>
+          <!-- filter -->
+          <div class="ms-4 border">
+
+            <button type="button" class="btn btn-primary ms-3" data-bs-toggle="modal" data-bs-target="#myModal">
+              <i class="fas fa-filter fs-6 bg-primary text-light  "></i>
+            </button>
+            <div class="modal" id="myModal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+
+                  <!-- Modal Header -->
+                  <div class="modal-header">
+                    <div class="modal-title">
+                      <div class="">
+                        <span class="float-start fs-4 fw-bold">Filter</span>
+
+                      </div>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                  </div>
+
+                  <!-- Modal body -->
+                  <div class="modal-body">
+                    <div class="w-100 d-flex">
+                      <!-- LEFT -->
+                      <div class="w-50 mt-3">
+                        <div class="list-group">
+                          <a href="#" class="list-group-item list-group-item-action " aria-current="true">
+                            <div class="d-flex w-100 justify-content-start">
+                              <h4 class="mb-1">Origin</h4>
+                            </div>
+                          </a>
+                          <a href="#" class="list-group-item list-group-item-action " aria-current="true">
+                            <div class="d-flex w-100 justify-content-start">
+                              <h4 class="mb-1">Destinatio</h4>
+                            </div>
+                          </a>
+                          <a href="#" class="list-group-item list-group-item-action " aria-current="true">
+                            <div class="d-flex w-100 justify-content-start">
+                              <h4 class="mb-1">Range Date</h4>
+
+                            </div>
+                            <p class="mb-1">from 06 Jul'1717 06 Aug'17</p>
+                          </a>
+                          <a href="#" class="list-group-item list-group-item-action " aria-current="true">
+                            <div class="d-flex w-100 justify-content-start">
+                              <h4 class="mb-1">Shipment Type</h4>
+                            </div>
+                          </a>
+                          <a href="#" class="list-group-item list-group-item-action " aria-current="true">
+                            <div class="d-flex w-100 justify-content-start">
+                              <h4 class="mb-1">Shipment By</h4>
+                            </div>
+                          </a>
+                          <a href="#" class="list-group-item list-group-item-action " aria-current="true">
+                            <div class="d-flex w-100 justify-content-start">
+                              <h4 class="mb-1">Status</h4>
+
+                            </div>
+                            <p class="mb-1">In status ,Arrived</p>
+                          </a>
+                          <a href="#" class="list-group-item list-group-item-action " aria-current="true">
+                            <div class="d-flex w-100 justify-content-start">
+                              <h4 class="mb-1">Ship</h4>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="w-50 mx-1">
+                        <!-- top  -->
+                        <div class="my-2 ">
+                          <span class="float-start my-2 ">Destination</span>
+                          <span class="float-end my-2">Select all</span>
+                        </div>
+                        <!-- search box -->
+                        <div class="input-group input-group-sm my-2">
+
+                          <input type="text" class="form-control" aria-label="Sizing example input" placeholder="Search"
+                            aria-describedby="inputGroup-sizing-sm">
+                        </div>
+                        <!-- check box -->
+                        <div>
+                          <ul class="list-group">
+                            <li class="list-group-item">
+                              <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                              ATLANTA
+                            </li>
+                            <li class="list-group-item">
+                              <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                              CHARLESTON
+                            </li>
+                            <li class="list-group-item">
+                              <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                              CHENNAI
+                            </li>
+                            <li class="list-group-item">
+                              <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                              MEXICO
+                            </li>
+                            <li class="list-group-item">
+                              <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                              NEWYORK
+                            </li>
+                            <li class="list-group-item">
+                              <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                              SHAVANNAH
+                            </li>
+                            <li class="list-group-item">
+                              <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                              SHANGAI
+                            </li>
+                          </ul>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Modal footer -->
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Apply</button>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+div span{
+    display: block;
+    font-family: sans-serif;
+    font-weight: 600;
+    opacity: 0.6;
+}
+#circle {
+    width: 10px;
+    height: 10px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    /* background: rgb(241, 124, 28); */
+  }

@@ -1,0 +1,24 @@
+<div class="col-md-12 backcolor ">
+  <div class="col-md-12 py-2 px-3 align-items-center justify-content-between d-flex border-bottom ">
+    <p class="fs-5">Outstanding Invoices(22)</p>
+    <p class="btn btn-primary">Show All</p>
+  </div>
+  <div class="col-md-12 border-bottom-side">
+
+    <div class="col-md-12 col-sm-12 p-3 border-bottom-side  " *ngFor="let data of dashboardCommon">
+
+      <div class=" d-flex justify-content-between align-items-center">
+        <div>
+          <span class="fw-bold opacity-75">Booking <a routerLink="/shipmentsdetails/details" class="list-unstyled"># {{data.bookingno}}</a></span>
+          <p class="my-2">AE - Prepaid - FOB</p>
+        </div>
+
+        <div class="">
+          <p> 35,000</p>
+        </div>
+
+      </div>
+
+
+
+    </div>

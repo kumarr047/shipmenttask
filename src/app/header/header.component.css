@@ -1,0 +1,44 @@
+
+
+ul li a {
+
+  font-weight: 550;
+
+}
+
+nav {
+  height: 65px;
+}
+
+.navbar-brand{
+    padding: 19px 28px;
+    margin-left: -12px;
+    background-color:  #6c9aee;
+   max-width: 40px;
+    height: 65px;
+    background-image: url(../../assets/logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.navbar-brand img{
+    width: 50px;
+    height: 50px;
+}
+.custom-right-image{
+    width: 50px;
+    border-radius: 50px;
+
+}
+/* .separate{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ 
+} */
+
+.ms-n5 {
+  margin-left: -40px;
+}
+
+

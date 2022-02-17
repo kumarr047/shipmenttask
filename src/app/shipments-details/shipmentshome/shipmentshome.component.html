@@ -1,0 +1,112 @@
+<div class="container  ">
+  <div>
+    <p class="fw-bold fs-6">Shipments > <a class="list-unstyled"># 120897001482</a></p>
+  </div>
+  <div>
+    <div class="">
+      <div class="col-md-12  row">
+        <!-- left -->
+        <div class="col-md-4 col-sm-12 backcolor">
+          <div class="d-flex border-bottom backcolor justify-content-center  align-items-center fw-bold fs-5 p-md-4">
+            {{"Milestones" | uppercase}} 
+          </div>
+          <mat-vertical-stepper>
+
+            <mat-step label="BOOKING DATE" state="phone">
+              <div>
+                <p>SAV</p>
+                <p>Savannah</p>
+                <p>Tue,09 May '17</p>
+              </div>
+            </mat-step>
+
+            <mat-step label="ORIGIN PICKUP DATE" state="chat">
+              <div>
+                <p>SAV</p>
+                <p>Savannah</p>
+                <p>Tue,09 May '17</p>
+              </div>
+            </mat-step>
+
+            <mat-step label="CARGO RECEIVED DATE" state="phone">
+              <div>
+                <p>SAV</p>
+                <p>Savannah</p>
+                <p>Tue,09 May '17</p>
+              </div>
+            </mat-step>
+
+            <mat-step label="LOADING DATE-CMAU1943180-40" state="phone">
+              <div>
+                <p>SAV</p>
+                <p>Savannah</p>
+                <p>Tue,09 May '17</p>
+              </div>
+            </mat-step>
+            <mat-step label="ETA-SINGAPUR" state="phone">
+              <div>
+                <p>SAV</p>
+                <p>Savannah</p>
+                <p>Tue,09 May '17</p>
+              </div>
+            </mat-step>
+
+            <mat-step label="ETA-PORT-KLANG" state="phone">
+              <div>
+                <p>SAV</p>
+                <p>Savannah</p>
+                <p>Tue,09 May '17</p>
+              </div>
+            </mat-step>
+            <mat-step label="ETD-SINGAPUR on NYK FURANO/NYK" state="phone">
+                <div>
+                  <p>SAV</p>
+                  <p>Savannah</p>
+                  <p>Tue,09 May '17</p>
+                </div>
+              </mat-step>
+              <mat-step label="ETA-CHENNAI" state="phone">
+                <div>
+                  <p>SAV</p>
+                  <p>Savannah</p>
+                  <p>Tue,09 May '17</p>
+                </div>
+              </mat-step>
+
+
+
+            <ng-template matStepperIcon="phone">
+              <mat-icon>call_end</mat-icon>
+            </ng-template>
+
+            <ng-template matStepperIcon="chat">
+              <mat-icon>forum</mat-icon>
+            </ng-template>
+
+          </mat-vertical-stepper>
+        </div>
+        <!-- right -->
+        <div class="col-md-8 col-sm-12   ">
+          <div class="border-bottom ">
+            <app-steppercommon></app-steppercommon>
+          </div>
+          <div>
+            <div class="col-md-12  col-sm-12 mt-2 backcolor">
+                <mat-tab-group mat-align-tabs="start" >
+                    <mat-tab label="Updates" >
+                        <app-updates></app-updates>
+                    </mat-tab>
+                    <mat-tab label="Details">
+                        <app-details></app-details>
+                     </mat-tab>
+                    <mat-tab label="Documents">
+                        <app-documents></app-documents> 
+                    </mat-tab>
+                  </mat-tab-group>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

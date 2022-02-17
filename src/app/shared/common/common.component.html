@@ -1,0 +1,53 @@
+  
+  <div class=" col-md-12 col-sm-12  border-bottom row backcolor" *ngFor="let data of shipmentCommon">
+  <!-- left -->
+  <div class="col-md-4 col-sm-12 p-3 ">
+
+    <div>
+      <span>Booking <a routerLink="/shipmentsdetails/details" class="list-unstyled"># {{data.bookingno}}</a></span>
+      <span class="my-3">AE - Prepaid - FOB</span>
+      
+    </div>
+
+    <div class="d-flex justify-content-between w-75">
+      <div>
+        <span>{{data.portStart}}</span>
+        <span class="opacity-75 fw-bolder ">{{data.portStartPlace}}</span>
+        <span>{{data.startDate}}</span>
+      </div>
+      <div class="d-flex justify-content-center align-items-center">
+       
+        <!-- <i class="fas fa-fighter-jet fs-3"></i> -->
+        <img [src]="data.image" alt="shipping " class="opacity-50 w-50">
+         
+      </div>
+      <div>
+        <span>{{data.portEnd}}</span>
+        <span class="opacity-75 fw-bolder" >{{data.portEndPlace}}</span>
+        <span>{{data.EndDate}}</span>
+      </div>
+    </div>
+     <!-- <img src="../../../assets/flight (1).png" alt="ship" > -->
+    <div class="d-flex  align-items-center justify-content-start mt-1">
+
+      <mat-progress-bar mode="determinate" value="70" class="w-50 " ></mat-progress-bar>
+      <div class="d-flex mt-1 ">
+        <p class="mx-1">{{data.totaldays}}</p>
+       <p class="opacity-75">({{data.departedfrom}})</p>
+
+      </div>
+    </div>
+    <div>
+      <p class="opacity-75">Departed from {{data.departedfromplace}}</p>
+    </div>
+  </div>
+  <!-- right -->
+  <div class="col-md-8 col-sm-12   pt-4  align-items-center  ">
+    <div class="d-flex justify-content-end align-items-center ">
+      <div class="mx-2" id="circle" [ngStyle]="{'background': data.color}"> </div>
+      <span class="">IN TRANSIT</span>
+      
+    </div>
+    <app-steppercommon></app-steppercommon>
+  </div>
+</div>
